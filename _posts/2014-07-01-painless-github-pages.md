@@ -1,7 +1,8 @@
 ---
 layout: post
-category : pages
-tags : [github, pages, jekyll]
+tagline: "An exercise in writing my own docs"
+category: pages
+tags: [github, pages, jekyll]
 ---
 
 Getting started with GitHub Pages
@@ -85,8 +86,9 @@ The front-matter block for this post looks like this:
 
     ---
     layout: post
-    category : pages
-    tags : [github, pages, jekyll]
+    tagline: "An exercise in writing my own docs"
+    category: pages
+    tags: [github, pages, jekyll]
     ---
 
 More info on front-matter is available here: <http://jekyllrb.com/docs/frontmatter/>
@@ -106,11 +108,13 @@ quickly, sometimes almost immediately after I push.
 Deleting Posts
 ---
 
-Jekyll creates some default posts.
-Since you should have a post by now, we can delete the default ones.
+Jekyll creates a default post.
+Since you should have a post by now, we can delete the default one.
 Before you delete it, though, you should go through it and follow its instructions.
 
-When you're ready to delete it, just delete its file.
+When you're ready to delete it, just delete its file: `rm _posts/core-samples/*`.
+Alternatively, just nuke its directory: `rm -r _posts/core-samples`.
+Don't accidentally `rm -r _posts` though!
 
 
 Here be Dragons
