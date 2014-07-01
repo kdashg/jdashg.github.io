@@ -1,6 +1,6 @@
 ---
 layout: post
-tagline: "An exercise in writing my own docs"
+tagline: An exercise in writing my own docs
 category: pages
 tags: [github, pages, jekyll]
 ---
