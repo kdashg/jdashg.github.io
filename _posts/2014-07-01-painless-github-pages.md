@@ -50,12 +50,14 @@ Add this to the bottom:
 
     markdown: kramdown
 
+
 Committing changes
 ---
 
 `git add` any new files you made and want to commit.
 `git commit -a` to commit the files you added, and any that have been modified.
 `git push` to upload the changes.
+
 
 The shortest `vi` tutorial in the world
 ---
@@ -66,7 +68,49 @@ In `i` mode, move around with the arrow keys, and type as if you were using a GU
 When you're done, hit `esc`, then type `:x` and hit enter to save your changes.
 If you don't want to save your changes, use `:q` instead of `:x`.
 
-Here Be Dragons
+
+Making a Markdown Post
+---
+
+Jekyll posts live in `REPO/_posts/`.
+Add a new post just by creating a file. (maybe use `vi`!)
+The name of the file has to look like YY-MM-DD-TITLE.md.
+For instance, this page lives at `REPO/_posts/2014-07-01-painless-github-pages`.
+
+Each Jekyll post needs to start with a 'YAML front-matter' block.
+The front-matter block for this post looks like this:
+
+    ---
+    layout: post
+    category : pages
+    tags : [github, pages, jekyll]
+    ---
+
+More info on front-matter is available here: <http://jekyllrb.com/docs/frontmatter/>
+
+After the closing `---` of the front-matter, just start writing markdown.
+(Or in our case, technically Kramdown)
+Here's the syntax doc for Kramdown: <http://kramdown.gettalong.org/syntax.html>
+
+Once you're done writing something, commit and push the changes to GitHub.
+Check http://USERNAME.github.io to see if it's working at all.
+GitHub says that it takes about 10 minutes to initialize your Pages repo after your first commit.
+It took about 9 minutes for me.
+Subsequent commits seem to be reflected by updates to my Pages much more
+quickly, sometimes almost immediately after I push.
+
+
+Deleting Posts
+---
+
+Jekyll creates some default posts.
+Since you should have a post by now, we can delete the default ones.
+Before you delete it, though, you should go through it and follow its instructions.
+
+When you're ready to delete it, just delete its file.
+
+
+Here be Dragons
 ---
 
 I'm not done yet. This is part of the test.
