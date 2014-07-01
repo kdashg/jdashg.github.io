@@ -39,8 +39,8 @@ In particular, setup:
 * author
 * production_url
 
-Disable the following by setting the provider to false.
-Or not, if you want to set these up already.
+Disable the following by setting the provider to false:
+(Or not, if you want to set these up already)
 
 * comments
 * analytics
@@ -64,7 +64,7 @@ Enter insert mode by typing `i`.
 Press `esc` at any time to get back out of any mode.
 In `i` mode, move around with the arrow keys, and type as if you were using a GUI text editor.
 When you're done, hit `esc`, then type `:x` and hit enter to save your changes.
-If you don't want to save your changes, use `:q` instead of `:x`
+If you don't want to save your changes, use `:q` instead of `:x`.
 
 Here Be Dragons
 ---
