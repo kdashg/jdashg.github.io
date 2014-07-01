@@ -4,15 +4,14 @@ category : pages
 tags : [github, pages, jekyll]
 ---
 
-... contents ...
-
 Getting started with GitHub Pages
 ===
 
-Grab this: http://jekyllbootstrap.com/
+Grab this: <http://jekyllbootstrap.com/>
 Follow the instructions there.
+
 Or here:
-`
+
     git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.io
     cd USERNAME.github.com
     git remote set-url origin git@github.com:USERNAME/USERNAME.github.io.git

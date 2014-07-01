@@ -4,6 +4,4 @@ category : meta
 tags : [meta]
 ---
 
-... contents ...
-
-coi2
+coi
