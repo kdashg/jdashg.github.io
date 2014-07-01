@@ -51,20 +51,23 @@ Add this to the bottom:
     markdown: kramdown
 
 
-Committing changes
+Committing Changes
 ---
 
 `git add` any new files you made and want to commit.
+
 `git commit -a` to commit the files you added, and any that have been modified.
+
 `git push` to upload the changes.
 
 
-The shortest `vi` tutorial in the world
+The Shortest `vi` Tutorial in the World
 ---
 
 Enter insert mode by typing `i`.
-Press `esc` at any time to get back out of any mode.
 In `i` mode, move around with the arrow keys, and type as if you were using a GUI text editor.
+Press `esc` at any time to get back out of any mode.
+
 When you're done, hit `esc`, then type `:x` and hit enter to save your changes.
 If you don't want to save your changes, use `:q` instead of `:x`.
 
