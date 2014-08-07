@@ -90,7 +90,7 @@ Let's have an example to talk about:
     bar = Move(foo);
 
 In the words of :waldo, it "reaches into the guts of `foo` and sticks it in `bar`".
-After moving `foo` to `bar`, `foo` is left in an undefined but destructable state.
+After moving `foo` to `bar`, `foo` is left in an unspecified but destructable state.
 The most trivial such state is just to null out foo, as if we did this:
 
     bar.reset(foo.release());
@@ -105,7 +105,7 @@ This might just become a register rename, when compiled!
 The reason this is still valid is via this reasoning:
 
 * By assigning something to `bar`, we're fine with any previous pointer in `bar` being destroyed.
-* `Move` will leave `foo` in an undefined but destructable state.
+* `Move` will leave `foo` in an unspecified but destructable state.
 * Since `foo` becomes undefined, we should not use its value, nor pass its value on to someone else.
 * Since we're not passing on `foo`, `foo` will get destoyed when it falls out of scope.
 * Therefore, since we're fine with old `bar` being destroyed, if we just swap `foo` and `bar`, the old `bar` (now in `foo`) will be destroyed when new `foo` falls out of scope.
