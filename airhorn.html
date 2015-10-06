@@ -3,7 +3,6 @@
     <meta charset='utf-8'/>
 </head>
 <body>
-    <img id='image'>
     <audio id='audio'></audio>
     <script>
 'use strict';
@@ -12,21 +11,40 @@ var audioData = 'data:audio/mpeg;base64,//uQZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 var audio = new Audio(audioData);
 
-audio.addEventListener('ended', function() {
-    document.bgColor = 'ffffff';
-});
+var isDown = false;
 
-document.addEventListener('mousedown', function() {
+function Down() {
+    if (isDown)
+        return;
+    isDown = true;
+
     audio.pause();
     audio.currentTime = 0;
     audio.play();
 
     document.bgColor = '00ff00';
+}
+
+function Up() {
+    if (!isDown)
+        return;
+    isDown = false;
+    document.bgColor = '7fff7f';
+}
+
+audio.addEventListener('ended', function() {
+    isDown = false;
+    document.bgColor = 'ffffff';
 });
 
-document.addEventListener('mouseup', function() {
-    document.bgColor = '7fff7f';
-});
+document.addEventListener('mousedown', Down);
+document.addEventListener('mouseup', Up);
+
+document.addEventListener('touchstart', Down);
+document.addEventListener('touchend', Up);
+
+document.addEventListener('pointerdown', Down);
+document.addEventListener('pointerup', Up);
 
     </script>
 </body>
