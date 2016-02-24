@@ -3,6 +3,7 @@
     <meta charset='utf-8'/>
 </head>
 <body>
+    <img id='image'>
     <audio id='audio'></audio>
     <script>
 'use strict';
@@ -11,40 +12,23 @@ var audioData = 'data:audio/mpeg;base64,//uQZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 var audio = new Audio(audioData);
 
-var isDown = false;
+audio.addEventListener('ended', function() {
+    document.bgColor = 'ffffff';
+});
 
-function Down() {
-    if (isDown)
-        return;
-    isDown = true;
-
+document.addEventListener('mousedown', function() {
     audio.pause();
     audio.currentTime = 0;
     audio.play();
 
     document.bgColor = '00ff00';
-}
-
-function Up() {
-    if (!isDown)
-        return;
-    isDown = false;
-    document.bgColor = '7fff7f';
-}
-
-audio.addEventListener('ended', function() {
-    isDown = false;
-    document.bgColor = 'ffffff';
 });
 
-document.addEventListener('mousedown', Down);
-document.addEventListener('mouseup', Up);
-
-document.addEventListener('touchstart', Down);
-document.addEventListener('touchend', Up);
-
-document.addEventListener('pointerdown', Down);
-document.addEventListener('pointerup', Up);
+document.addEventListener('mouseup', function() {
+    if (document.bgColor == '00ff00') {
+        document.bgColor = '7fff7f';
+    }
+});
 
     </script>
 </body>
